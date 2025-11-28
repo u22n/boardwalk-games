@@ -22,6 +22,12 @@ h2,
 h3 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+/* Reusable section spacing */
+.section {
+    margin: 2rem 0;
 }
 
 .sub-heading-color {
@@ -43,6 +49,11 @@ h3 {
 /* Ensure navbar brand text (if present) remains light for contrast */
 #navbar .navbar-brand, #navbar .nav-link {
     color: rgba(255,255,255,0.95) !important;
+}
+
+/* Header-specific styles */
+#home-header .lead {
+    font-family: var(--secondary-font);
 }
 
 /* Temporary grid visualization (commented out) - kept for reference
