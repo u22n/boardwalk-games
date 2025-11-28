@@ -15,6 +15,8 @@
 
 body {
     font-family: var(--primary-font);
+    /* Compensate for the fixed-top navbar height so content isn't hidden beneath it */
+    padding-top: 57.15px;
 }
 
 h1,
@@ -32,11 +34,46 @@ h3 {
 
 /* Reusable section spacing */
 .section {
-    margin: 2rem 0;
+    /* Use padding-top so in-page anchors are visible below the fixed navbar */
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 .sub-heading-color {
     color: var(--highlight-color);
+}
+
+/* Custom button styles */
+.custom-button-filled {
+    display: inline-block;
+    padding: .5rem .9rem;
+    border-radius: .375rem;
+    border: 2px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: #fff;
+    text-decoration: none;
+}
+.custom-button-filled:hover,
+.custom-button-filled:focus {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #fff;
+}
+
+.custom-button-outline {
+    display: inline-block;
+    padding: .45rem .85rem;
+    border-radius: .375rem;
+    border: 2px solid var(--highlight-color);
+    background-color: #fff;
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+.custom-button-outline:hover,
+.custom-button-outline:focus {
+    background-color: var(--highlight-color);
+    color: #fff;
+    border-color: var(--highlight-color);
 }
 
 /* Navbar styles (below global styles) */
