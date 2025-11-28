@@ -18,11 +18,16 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
     text-transform: uppercase;
+}
+
+h3 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    text-transform: none;
 }
 
 /* Reusable section spacing */
@@ -54,6 +59,24 @@ h3 {
 /* Header-specific styles */
 #home-header .lead {
     font-family: var(--secondary-font);
+}
+
+/* Services section styles */
+/* spacing for the services heading */
+#services h2 {
+    margin-bottom: 2rem;
+}
+
+/* make the pricing stand out and remove default footer background */
+#services .card-footer {
+    background: transparent;
+    font-weight: 700;
+    color: var(--highlight-color);
+}
+
+/* add spacing between stacked cards on small screens */
+#services .card {
+    margin-bottom: 1.5rem;
 }
 
 /* Temporary grid visualization (commented out) - kept for reference
