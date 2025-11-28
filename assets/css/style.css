@@ -87,3 +87,38 @@ h3 {
     background-color: rgba(13,110,253,0.04);
 }
 .*/
+
+/* Responsive card-height fixes for the Services section
+   Using Bootstrap breakpoints to keep behavior consistent with the layout.
+   - Tablet (>=768px): give card-bodies a min-height so footers align
+   - Large (>=992px): remove min-height to avoid excess spacing
+   - Extra large (>=1200px): adjust for wider layouts
+   - XXL (>=1400px): final adjustment for widest screens
+*/
+@media (min-width: 768px) {
+    /* Tablet: ensure cards align vertically by making card body tall enough */
+    #services .card-body {
+        min-height: 191px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Large: remove the forced min-height to reduce extra spacing */
+    #services .card-body {
+        min-height: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Extra large: slightly taller body for this layout */
+    #services .card-body {
+        min-height: 220px;
+    }
+}
+
+@media (min-width: 1400px) {
+    /* XXL: adjust to a slightly smaller min-height to balance spacing */
+    #services .card-body {
+        min-height: 195px;
+    }
+}
