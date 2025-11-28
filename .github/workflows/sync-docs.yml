@@ -1,0 +1,45 @@
+name: Sync root -> docs (for Pages)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sync-docs:
+    name: Sync root to docs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Sync root to docs folder
+        run: |
+          set -euo pipefail
+          echo "Creating docs/ and syncing files"
+          mkdir -p docs
+          rsync -av --delete \
+            --exclude='.git' \
+            --exclude='docs' \
+            --exclude='.github' \
+            --exclude='scripts' \
+            --exclude='node_modules' \
+            --exclude='.DS_Store' \
+            . docs/
+
+      - name: Commit and push docs changes
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "No changes to sync into docs/."
+            exit 0
+          fi
+          git commit -m "chore: sync root -> docs [skip ci]"
+          git push origin HEAD:main
