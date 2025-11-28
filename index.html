@@ -13,7 +13,7 @@
   </head>
   <body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light border-bottom" data-bs-theme="dark">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light border-bottom fixed-top" data-bs-theme="dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="assets/images/logo-sm-white.png" alt="Boardwalk Games" class="logo">
@@ -211,5 +211,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome Kit (if you have a kit, replace the CDN with your kit script) -->
     <!-- <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script> -->
+      <!-- Collapse mobile navbar and smooth-scroll to in-page anchors -->
+      <script>
+        document
+          .querySelectorAll(".navbar-collapse .nav-link")
+          .forEach((link) => {
+            link.addEventListener("click", function (e) {
+              let href = e.target.getAttribute("href");
+              let section = null;
+              try { section = document.querySelector(href); } catch (err) { section = null; }
+              if (section) {
+                e.preventDefault(); // Prevent default anchor click behavior
+                let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight || document.querySelector('#navbar').offsetHeight;
+                window.scroll({
+                  top: section.offsetTop - navbarHeight,
+                  behavior: "smooth",
+                });
+                document
+                  .querySelector(".navbar-collapse")
+                  .classList.remove("show"); // Collapse navbar
+              }
+            });
+          });
+      </script>
   </body>
 </html>

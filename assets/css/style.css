@@ -15,6 +15,8 @@
 
 body {
     font-family: var(--primary-font);
+    /* Compensate for the fixed-top navbar height so content isn't hidden beneath it */
+    padding-top: 57.15px;
 }
 
 h1,
@@ -32,7 +34,9 @@ h3 {
 
 /* Reusable section spacing */
 .section {
-    margin: 2rem 0;
+    /* Use padding-top so in-page anchors are visible below the fixed navbar */
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 .sub-heading-color {
