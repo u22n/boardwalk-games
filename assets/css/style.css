@@ -126,6 +126,44 @@ h3 {
     color: var(--highlight-color);
 }
 
+/* Make the opening-times table a white card inside the dark footer */
+#contact .table {
+    background: #fff;
+    color: var(--primary-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+    width: 100%;
+    max-width: 420px; /* keep the white box compact */
+    margin-left: auto; /* align to the right column */
+    margin-right: 0;
+}
+
+#contact .table th,
+#contact .table td {
+    vertical-align: middle;
+}
+
+#contact .table thead th {
+    font-weight: 700;
+}
+
+#contact .table tbody tr + tr td {
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+#contact .table td {
+    padding: .75rem 1rem;
+}
+
+/* Make the white table responsive: full-width on small screens */
+@media (max-width: 767.98px) {
+    #contact .table {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 /* Responsive card-height fixes for the Services section
    Using Bootstrap breakpoints to keep behavior consistent with the layout.
    - Tablet (>=768px): give card-bodies a min-height so footers align
