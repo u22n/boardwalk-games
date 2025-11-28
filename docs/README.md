@@ -99,7 +99,7 @@ npx http-server -c-1 . 8080
 ## Notes & Demo Status
 
 - This is a demo / portfolio project: it demonstrates layout, UX, and front-end form validation only. There is no server-side booking API — booking/reservation forms currently redirect to a static `success.html` page.
-- If you want a production-ready booking system, I can help wire a simple backend (serverless function or express app) to accept and persist reservations.
+- For a production-ready booking system, consider wiring a simple backend (serverless function or express app) to accept and persist reservations.
 
 ## Credits
 
@@ -114,17 +114,14 @@ MIT License — see `LICENSE` (not included by default)
 
 ## Contributing
 
-Contributions welcome — open an issue or PR, and follow the repository style (plain HTML + CSS + small JS). If you want help adding tests or a CI pipeline for Pages deployment, I can add that.
+Contributions welcome — open an issue or PR, and follow the repository style (plain HTML + CSS + small JS). Consider adding tests or a CI pipeline for Pages deployment.
 
----
 
-If you'd like, I can:
+Optional next steps
 
-- Add the `LICENSE` file and a basic contributing guide
-- Create a `docs/` sync script (copy files from root to `docs/` and commit) so Pages parity is easier to maintain
-- Add a short GitHub Actions workflow to automatically copy root files into `docs/` on push
-
-Tell me which of the above you'd like next.
+- Add a `LICENSE` file and a basic contributing guide
+- Create or adjust a `docs/` sync script to keep `docs/` up-to-date
+- Add or customise a GitHub Actions workflow to copy root files into `docs/` on push
 
 ## Docs sync (local + automatic)
 
@@ -152,5 +149,5 @@ Behavior of the GitHub Action:
 Notes and safety:
 
 - The action is intentionally simple: it only commits when `docs/` differs from the root. If you prefer to review the changes locally first, run the local script and commit manually instead of relying on the action.
-- If you want the action to only run on tagged releases or on a specific branch, I can update the workflow trigger accordingly.
+The workflow can be configured to run on tagged releases or specific branches if desired.
 
