@@ -1,46 +1,37 @@
-/* Google Fonts import (Inter + Macondo) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Macondo&display=swap');
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Macondo&display=swap');
 
-/* CSS Variables (global) */
+/* CSS Variables */
 :root {
-  /* Primary font used for body text */
-  --primary-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  /* Secondary (display) font used for headings */
-  --secondary-font: 'Macondo', cursive;
-  /* Primary colour (blue) - update this variable to change site colour */
-  --primary-color: #0d6efd;
+    --primary-font: "Inter", sans-serif;
+    --secondary-font: "Macondo", cursive;
+    --primary-color: #3a2620; /* dark brown */
+    --secondary-color: #aa9581; /* light brown */
+    --highlight-color: #416a8e; /* blue */
+    --highlight-color-light: #7a9fc2; /* light blue */
 }
 
-/* Basic styles for the Boardwalk Games starter page */
+/* Global styles */
+
 body {
-  /* Apply Inter via CSS variable */
-  font-family: var(--primary-font);
-  margin: 0;
-  color: #222;
+    font-family: var(--primary-font);
 }
 
-/* Apply Macondo to h1 headings and use primary colour for headings */
-h1, h2, h3 {
-  font-family: var(--secondary-font);
-  color: var(--primary-color);
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
 }
 
-header {
-  background: #f4f4f4;
-  padding: 2rem 1rem;
-  text-align: center;
+.sub-heading-color {
+    color: var(--highlight-color);
 }
 
-main {
-  padding: 1rem;
-  max-width: 900px;
-  margin: 0 auto;
+/* Temporary grid visualization - remove once layout is final */
+.container, .row {
+    outline: 1px dashed rgba(0,0,0,0.12);
 }
-
-#hero {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 6px;
+.col-12 {
+    background-color: rgba(13,110,253,0.04);
 }

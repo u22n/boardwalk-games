@@ -11,19 +11,33 @@
     <!-- Custom styles (must come after Bootstrap) -->
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <body>
-    <header class="py-4">
-      <div class="container text-center">
-        <h1 class="display-4">Boardwalk Games</h1>
-        <p class="lead">Welcome to Boardwalk Games — your local tabletop café.</p>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navigation placeholder (will be replaced later) -->
+    <div id="nav-placeholder"><!-- Navigation goes here --></div>
+
+    <!-- Header grid -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-6">Header column 1 placeholder</div>
+          <div class="col-12 col-xl-6">Header column 2 placeholder</div>
+        </div>
       </div>
     </header>
 
+    <!-- main holds semantic sections (services, events, testimonials). Grid is inside each section -->
     <main>
-      <section class="container">
-        <h2>Discover games & events</h2>
-        <p>This is a starter index page. Add images into <code>assets/images</code> and they'll appear here.</p>
-        <img src="assets/images/placeholder.jpg" alt="Boardwalk Games" id="hero">
+      <!-- Services section (grid only) -->
+      <section class="container my-4" aria-labelledby="services-heading">
+        <div class="row">
+          <div class="col-12" id="services-heading"><h2>Services</h2></div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl-3">Service card 1</div>
+          <div class="col-12 col-md-6 col-xl-3">Service card 2</div>
+          <div class="col-12 col-md-6 col-xl-3">Service card 3</div>
+          <div class="col-12 col-md-6 col-xl-3">Service card 4</div>
+        </div>
       </section>
     </main>
 
