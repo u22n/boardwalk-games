@@ -28,10 +28,11 @@ h3 {
     color: var(--highlight-color);
 }
 
-/* Temporary grid visualization - remove once layout is final */
+/* Temporary grid visualization - remove once layout is final
 .container, .row {
     outline: 1px dashed rgba(0,0,0,0.12);
 }
 .col-12 {
     background-color: rgba(13,110,253,0.04);
 }
+*/
