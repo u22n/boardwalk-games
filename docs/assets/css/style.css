@@ -126,36 +126,40 @@ h3 {
     color: var(--highlight-color);
 }
 
-/* Make the opening-times table a white card inside the dark footer */
+/* Opening times table: dark footer variant.
+   Use Bootstrap's `table-dark` but override backgrounds so cells are transparent
+   with white text and subtle white borders for the dark footer. */
 #contact .table {
-    background: #fff;
-    color: var(--primary-color);
-    border-radius: 4px;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
     width: 100%;
-    max-width: 420px; /* keep the white box compact */
+    max-width: 420px; /* keep the box compact */
     margin-left: auto; /* align to the right column */
     margin-right: 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
 }
 
-#contact .table th,
-#contact .table td {
-    vertical-align: middle;
+/* Strong selector to override Bootstrap table dark backgrounds */
+#contact .table.table-dark,
+#contact .table.table-dark * {
+    background-color: transparent !important;
+    color: #fff !important;
+    border-color: rgba(255,255,255,0.12) !important;
 }
 
 #contact .table thead th {
     font-weight: 700;
+    background: transparent;
+    color: #fff;
 }
 
-#contact .table tbody tr + tr td {
-    border-top: 1px solid rgba(0,0,0,0.06);
-}
-
-#contact .table td {
+#contact .table td,
+#contact .table th {
+    vertical-align: middle;
     padding: .75rem 1rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
 }
 
-/* Make the white table responsive: full-width on small screens */
+/* Make the table responsive: full-width on small screens */
 @media (max-width: 767.98px) {
     #contact .table {
         max-width: 100%;
