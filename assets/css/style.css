@@ -88,6 +88,44 @@ h3 {
 }
 .*/
 
+/* Footer / Contact section styles */
+#contact {
+    background: var(--primary-color);
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+#contact h2 {
+    color: #fff;
+}
+
+#contact .sub-heading-color {
+    color: var(--highlight-color-light);
+}
+
+/* icons next to contact details */
+#contact i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+/* social links styling */
+#contact .social-links a {
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+#contact .social-links i {
+    color: var(--highlight-color-light);
+    font-size: 1.9rem;
+    transition: color .2s ease;
+}
+
+#contact .social-links a:hover i {
+    color: var(--highlight-color);
+}
+
 /* Responsive card-height fixes for the Services section
    Using Bootstrap breakpoints to keep behavior consistent with the layout.
    - Tablet (>=768px): give card-bodies a min-height so footers align
